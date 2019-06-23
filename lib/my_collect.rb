@@ -1,12 +1,12 @@
-collection = ['car', 'bike']
-
-def my_collect(array)
+def my_collect(array) # put argument(s) here
+  # code here
   i = 0
-while i < array.length
-yield(array[i])
-i += 1
-my_collect(collection) do |auto|
-  lang.upcase
-end
-array
+  result = []
+
+  while i < array.size
+    block_given? # optional
+    result << yield(array[i]) # if block, then yield to block # also need to pass argument(s) to yield, otherwise block is operating on nil
+    i += 1
+  end
+result
 end
