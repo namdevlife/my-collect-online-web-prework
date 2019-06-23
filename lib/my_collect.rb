@@ -1,6 +1,5 @@
-def my_collect(array) # put argument(s) here
-  # code here
-  i = 0
+def my_collect(array) 
+   i = 0
   result = []
 
   while i < array.size
